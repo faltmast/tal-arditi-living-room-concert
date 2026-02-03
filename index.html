@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tal Arditi - Living Room Concert</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="hero">
+            <h1 class="concert-title">Tal Arditi</h1>
+            <p class="subtitle">Living Room Concert</p>
+        </header>
+
+        <section class="details">
+            <div class="detail-item">
+                <span class="label">Date</span>
+                <span class="value">February 20, 2026</span>
+            </div>
+            <div class="detail-item">
+                <span class="label">Location</span>
+                <span class="value">Neukölln @ Alexis Appartment</span>
+            </div>
+            <div class="detail-item">
+                <span class="label">Price</span>
+                <span class="value">10-20 EUR (sliding scale)</span>
+            </div>
+            <div class="detail-item">
+                <span class="label">Capacity</span>
+                <span class="value"><span id="spots-left">25</span> spots left</span>
+            </div>
+        </section>
+
+        <section class="about">
+            <p class="bio">Berlin-based artist blending indie, folk, and electronica with raw emotion. Known for intimate, looping-driven performances that create immersive soundscapes.</p>
+        </section>
+
+        <section class="signup">
+            <h2>Reserve Your Spot</h2>
+            <form id="signup-form" class="form">
+                <div class="form-group">
+                    <input
+                        type="text"
+                        id="name"
+                        name="name"
+                        placeholder="Your name"
+                        required
+                        autocomplete="name"
+                    >
+                </div>
+                <div class="form-group">
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        placeholder="Your email"
+                        required
+                        autocomplete="email"
+                    >
+                </div>
+                <button type="submit" class="btn-primary">Reserve & Pay</button>
+                <p class="form-note">You'll be redirected to PayPal to complete your payment.</p>
+            </form>
+        </section>
+
+        <footer class="footer">
+            <p>Questions? Reach out to <a href="mailto:hello@talarditi.com">hello@talarditi.com</a></p>
+        </footer>
+    </div>
+
+    <div id="loading" class="loading hidden">
+        <div class="spinner"></div>
+        <p>Reserving your spot...</p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

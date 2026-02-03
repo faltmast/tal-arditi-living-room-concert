@@ -3,8 +3,8 @@ const CONFIG = {
     // Google Apps Script Web App URL (replace with your deployed script URL)
     GOOGLE_SCRIPT_URL: 'YOUR_GOOGLE_SCRIPT_URL_HERE',
 
-    // PayPal payment URL (replace with actual PayPal link)
-    PAYPAL_URL: 'YOUR_PAYPAL_URL_HERE',
+    // PayPal payment URL
+    PAYPAL_URL: 'https://www.paypal.com/paypalme/arditital',
 
     // Maximum capacity
     MAX_CAPACITY: 25

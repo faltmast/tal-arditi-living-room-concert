@@ -278,9 +278,20 @@ input::placeholder {
     margin-top: 6px;
 }
 
+.info-note {
+    padding: 20px 40px;
+    text-align: center;
+}
+
+.info-note p {
+    font-size: 14px;
+    line-height: 1.6;
+    color: var(--text-light);
+}
+
 .footer {
     text-align: center;
-    padding: 24px 40px 28px;
+    padding: 20px 40px 28px;
     border-top: 1px solid rgba(74, 56, 40, 0.5);
 }
 
@@ -367,6 +378,7 @@ input::placeholder {
     .details,
     .about,
     .signup,
+    .info-note,
     .footer {
         padding-left: 28px;
         padding-right: 28px;

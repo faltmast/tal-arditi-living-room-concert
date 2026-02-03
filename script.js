@@ -7,7 +7,7 @@ const CONFIG = {
     PAYPAL_URL: 'https://www.paypal.com/paypalme/arditital',
 
     // Maximum capacity
-    MAX_CAPACITY: 25
+    MAX_CAPACITY: 20
 };
 
 // Initialize

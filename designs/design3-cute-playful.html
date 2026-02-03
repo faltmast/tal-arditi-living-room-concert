@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Design 3: Cute & Playful</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Comic Sans MS', 'Marker Felt', cursive, sans-serif;
+            background: linear-gradient(135deg, #FFE8E8 0%, #FFE8F5 50%, #E8F0FF 100%);
+            color: #4A4A4A;
+            line-height: 1.6;
+            min-height: 100vh;
+            padding: 40px 20px;
+        }
+
+        .design-label {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            opacity: 0.5;
+        }
+
+        .container {
+            max-width: 550px;
+            margin: 0 auto;
+            background: #FFF;
+            border-radius: 40px;
+            padding: 50px 40px;
+            box-shadow: 0 20px 60px rgba(255, 150, 200, 0.3);
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .emoji {
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+
+        .concert-title {
+            font-size: 52px;
+            font-weight: 900;
+            background: linear-gradient(135deg, #FF6B9D 0%, #C06AFF 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 12px;
+        }
+
+        .subtitle {
+            font-size: 18px;
+            color: #999;
+            font-weight: 600;
+        }
+
+        .info-cards {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 16px;
+            margin: 40px 0;
+        }
+
+        .card {
+            background: linear-gradient(135deg, #FFE8F5 0%, #E8F0FF 100%);
+            padding: 24px;
+            border-radius: 20px;
+            text-align: center;
+        }
+
+        .card-icon {
+            font-size: 28px;
+            margin-bottom: 8px;
+        }
+
+        .card-label {
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #999;
+            margin-bottom: 4px;
+        }
+
+        .card-value {
+            font-size: 16px;
+            font-weight: 700;
+            color: #4A4A4A;
+        }
+
+        .bio {
+            background: #FFF9E8;
+            padding: 28px;
+            border-radius: 20px;
+            font-size: 15px;
+            margin-bottom: 40px;
+            line-height: 1.7;
+            text-align: center;
+        }
+
+        .form {
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+        }
+
+        input {
+            padding: 18px 20px;
+            border: 3px solid #FFE8F5;
+            border-radius: 16px;
+            font-size: 15px;
+            font-family: inherit;
+            background: #FFFBFF;
+            transition: all 0.3s;
+        }
+
+        input:focus {
+            outline: none;
+            border-color: #FF6B9D;
+            background: #FFF;
+        }
+
+        button {
+            padding: 20px;
+            background: linear-gradient(135deg, #FF6B9D 0%, #C06AFF 100%);
+            color: #FFF;
+            border: none;
+            border-radius: 16px;
+            font-size: 16px;
+            font-weight: 900;
+            cursor: pointer;
+            transition: all 0.3s;
+            box-shadow: 0 8px 20px rgba(255, 107, 157, 0.3);
+        }
+
+        button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 12px 28px rgba(255, 107, 157, 0.4);
+        }
+
+        .note {
+            text-align: center;
+            font-size: 13px;
+            color: #999;
+            margin-top: 30px;
+            line-height: 1.6;
+        }
+
+        @media (max-width: 600px) {
+            .info-cards { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <div class="design-label">Design 3: Cute & Playful</div>
+
+    <div class="container">
+        <div class="header">
+            <div class="emoji">🎸✨</div>
+            <h1 class="concert-title">Tal Arditi</h1>
+            <p class="subtitle">Living Room Concert</p>
+        </div>
+
+        <div class="info-cards">
+            <div class="card">
+                <div class="card-icon">📅</div>
+                <div class="card-label">Date</div>
+                <div class="card-value">Feb 20, 2026</div>
+            </div>
+            <div class="card">
+                <div class="card-icon">📍</div>
+                <div class="card-label">Location</div>
+                <div class="card-value">Neukölln</div>
+            </div>
+            <div class="card">
+                <div class="card-icon">💰</div>
+                <div class="card-label">Price</div>
+                <div class="card-value">10-20 EUR</div>
+            </div>
+            <div class="card">
+                <div class="card-icon">👥</div>
+                <div class="card-label">Spots</div>
+                <div class="card-value">20 left</div>
+            </div>
+        </div>
+
+        <div class="bio">
+            Indie folk meets electronica in the coziest setting! Join Tal for an intimate evening of looping magic and heartfelt melodies.
+        </div>
+
+        <form class="form">
+            <input type="text" placeholder="Your name ✍️" required>
+            <input type="email" placeholder="Your email 📧" required>
+            <button type="submit">Reserve My Spot! 🎉</button>
+        </form>
+
+        <p class="note">
+            We'll email you the exact address before the show! 💌<br>
+            Payment = you're in! 🎸
+        </p>
+    </div>
+</body>
+</html>

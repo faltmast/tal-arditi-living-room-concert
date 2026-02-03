@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Design 5: Glassmorphism</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #FFF;
+            line-height: 1.6;
+            min-height: 100vh;
+            padding: 40px 20px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        body::before {
+            content: '';
+            position: absolute;
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(255,255,255,0.1), transparent);
+            border-radius: 50%;
+            top: -200px;
+            right: -200px;
+        }
+
+        body::after {
+            content: '';
+            position: absolute;
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle, rgba(255,255,255,0.08), transparent);
+            border-radius: 50%;
+            bottom: -150px;
+            left: -150px;
+        }
+
+        .design-label {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            opacity: 0.7;
+        }
+
+        .container {
+            max-width: 550px;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(20px);
+            border-radius: 30px;
+            padding: 50px 40px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 30px 80px rgba(0, 0, 0, 0.3);
+            position: relative;
+            z-index: 1;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .concert-title {
+            font-size: 56px;
+            font-weight: 200;
+            letter-spacing: 8px;
+            margin-bottom: 12px;
+        }
+
+        .subtitle {
+            font-size: 16px;
+            opacity: 0.9;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            font-weight: 300;
+        }
+
+        .glass-card {
+            background: rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 30px;
+            margin: 30px 0;
+            border: 1px solid rgba(255, 255, 255, 0.15);
+        }
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 16px;
+        }
+
+        .info-item {
+            text-align: center;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 12px;
+        }
+
+        .info-label {
+            font-size: 11px;
+            opacity: 0.7;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            margin-bottom: 8px;
+        }
+
+        .info-value {
+            font-size: 18px;
+            font-weight: 500;
+        }
+
+        .bio {
+            font-size: 15px;
+            line-height: 1.7;
+            opacity: 0.9;
+            text-align: center;
+        }
+
+        .form {
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+        }
+
+        input {
+            padding: 18px 20px;
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 12px;
+            color: #FFF;
+            font-size: 15px;
+            backdrop-filter: blur(10px);
+            transition: all 0.3s;
+        }
+
+        input::placeholder {
+            color: rgba(255, 255, 255, 0.6);
+        }
+
+        input:focus {
+            outline: none;
+            background: rgba(255, 255, 255, 0.15);
+            border-color: rgba(255, 255, 255, 0.4);
+        }
+
+        button {
+            padding: 18px;
+            background: rgba(255, 255, 255, 0.25);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            border-radius: 12px;
+            color: #FFF;
+            font-size: 16px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        button:hover {
+            background: rgba(255, 255, 255, 0.35);
+            transform: translateY(-2px);
+        }
+
+        .note {
+            text-align: center;
+            font-size: 13px;
+            opacity: 0.8;
+            margin-top: 30px;
+            line-height: 1.6;
+        }
+
+        @media (max-width: 600px) {
+            .info-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <div class="design-label">Design 5: Glassmorphism</div>
+
+    <div class="container">
+        <div class="header">
+            <h1 class="concert-title">TAL ARDITI</h1>
+            <p class="subtitle">Living Room Concert</p>
+        </div>
+
+        <div class="glass-card">
+            <div class="info-grid">
+                <div class="info-item">
+                    <div class="info-label">Date</div>
+                    <div class="info-value">Feb 20, 2026</div>
+                </div>
+                <div class="info-item">
+                    <div class="info-label">Location</div>
+                    <div class="info-value">Neukölln</div>
+                </div>
+                <div class="info-item">
+                    <div class="info-label">Price</div>
+                    <div class="info-value">10-20 EUR</div>
+                </div>
+                <div class="info-item">
+                    <div class="info-label">Capacity</div>
+                    <div class="info-value">20 spots</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="glass-card">
+            <p class="bio">Berlin-based artist blending indie, folk, and electronica with raw emotion. Known for intimate, looping-driven performances that create immersive soundscapes.</p>
+        </div>
+
+        <form class="form">
+            <input type="text" placeholder="Your name" required>
+            <input type="email" placeholder="Your email" required>
+            <button type="submit">Reserve Your Spot</button>
+        </form>
+
+        <p class="note">
+            The exact location will be sent via email before the event.<br>
+            Once you've paid, your attendance is confirmed.
+        </p>
+    </div>
+</body>
+</html>

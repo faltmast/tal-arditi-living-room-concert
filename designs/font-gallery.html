@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Font Variations - Circular Hero Design</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background: linear-gradient(135deg, #1A0F0A 0%, #2D1810 100%);
+            color: #FFF9F4;
+            padding: 60px 40px;
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+        h1 {
+            font-size: 56px;
+            font-weight: 200;
+            letter-spacing: 6px;
+            margin-bottom: 16px;
+            color: #FFB84D;
+        }
+        p {
+            font-size: 18px;
+            color: #D9B89A;
+        }
+        .gallery {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+        }
+        .font-card {
+            background: rgba(45, 24, 16, 0.6);
+            border: 1px solid rgba(232, 123, 42, 0.3);
+            border-radius: 16px;
+            overflow: hidden;
+            transition: all 0.3s;
+            cursor: pointer;
+        }
+        .font-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(232, 123, 42, 0.3);
+            border-color: #E87B2A;
+        }
+        .font-preview {
+            height: 280px;
+            background: linear-gradient(135deg, #FFB84D, #E87B2A);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 48px;
+            color: #1A0F0A;
+            font-weight: 700;
+        }
+        .font-info {
+            padding: 24px;
+        }
+        .font-title {
+            font-size: 22px;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: #FFB84D;
+        }
+        .font-description {
+            font-size: 14px;
+            color: #D9B89A;
+            margin-bottom: 16px;
+            line-height: 1.5;
+        }
+        .view-button {
+            display: inline-block;
+            padding: 12px 24px;
+            background: #E87B2A;
+            color: #FFF;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 14px;
+            transition: all 0.3s;
+        }
+        .view-button:hover {
+            background: #FFB84D;
+            color: #1A0F0A;
+        }
+        @media (max-width: 768px) {
+            h1 { font-size: 36px; }
+            .gallery { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Font Variations</h1>
+        <p>5 different typography styles for the circular hero design</p>
+    </div>
+
+    <div class="gallery">
+        <div class="font-card" onclick="window.open('font1-serif-elegant.html', '_blank')">
+            <div class="font-preview" style="font-family: 'Baskerville', 'Georgia', serif; font-style: italic;">Tal</div>
+            <div class="font-info">
+                <div class="font-title">1. Serif Elegant</div>
+                <div class="font-description">Classic Baskerville/Georgia with italics. Timeless and sophisticated.</div>
+                <a href="font1-serif-elegant.html" class="view-button" target="_blank">View Design</a>
+            </div>
+        </div>
+
+        <div class="font-card" onclick="window.open('font2-condensed.html', '_blank')">
+            <div class="font-preview" style="font-family: 'Arial Narrow', 'Arial', sans-serif; font-weight: 700; letter-spacing: 8px;">TAL</div>
+            <div class="font-info">
+                <div class="font-title">2. Modern Condensed</div>
+                <div class="font-description">Narrow condensed sans-serif. Bold and contemporary with wide tracking.</div>
+                <a href="font2-condensed.html" class="view-button" target="_blank">View Design</a>
+            </div>
+        </div>
+
+        <div class="font-card" onclick="window.open('font3-bold-display.html', '_blank')">
+            <div class="font-preview" style="font-family: 'Impact', 'Arial Black', sans-serif; font-weight: 900;">TAL</div>
+            <div class="font-info">
+                <div class="font-title">3. Bold Display</div>
+                <div class="font-description">Heavy Impact font. Strong presence and maximum impact.</div>
+                <a href="font3-bold-display.html" class="view-button" target="_blank">View Design</a>
+            </div>
+        </div>
+
+        <div class="font-card" onclick="window.open('font4-light-geometric.html', '_blank')">
+            <div class="font-preview" style="font-family: 'Futura', 'Avenir', sans-serif; font-weight: 100; letter-spacing: 6px;">TAL</div>
+            <div class="font-info">
+                <div class="font-title">4. Light Geometric</div>
+                <div class="font-description">Ultra-thin Futura/Avenir. Clean, modern, and airy.</div>
+                <a href="font4-light-geometric.html" class="view-button" target="_blank">View Design</a>
+            </div>
+        </div>
+
+        <div class="font-card" onclick="window.open('font5-handwritten.html', '_blank')">
+            <div class="font-preview" style="font-family: 'Brush Script MT', cursive;">Tal</div>
+            <div class="font-info">
+                <div class="font-title">5. Handwritten Style</div>
+                <div class="font-description">Brush script with personality. Warm and personal feel.</div>
+                <a href="font5-handwritten.html" class="view-button" target="_blank">View Design</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

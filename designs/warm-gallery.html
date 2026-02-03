@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Warm Designs Gallery - Tal Arditi Concert</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background: linear-gradient(135deg, #1A0F0A 0%, #2D1810 100%);
+            color: #FFF9F4;
+            padding: 60px 40px;
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+        h1 {
+            font-size: 56px;
+            font-weight: 200;
+            letter-spacing: 6px;
+            margin-bottom: 16px;
+            color: #FFB84D;
+        }
+        p {
+            font-size: 18px;
+            color: #D9B89A;
+        }
+        .gallery {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+        }
+        .design-card {
+            background: rgba(45, 24, 16, 0.6);
+            border: 1px solid rgba(232, 123, 42, 0.3);
+            border-radius: 16px;
+            overflow: hidden;
+            transition: all 0.3s;
+            cursor: pointer;
+        }
+        .design-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(232, 123, 42, 0.3);
+            border-color: #E87B2A;
+        }
+        .design-preview {
+            height: 280px;
+            background: #E87B2A;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 48px;
+            background: linear-gradient(135deg, #FFB84D, #E87B2A);
+        }
+        .design-info {
+            padding: 24px;
+        }
+        .design-title {
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: #FFB84D;
+        }
+        .design-description {
+            font-size: 14px;
+            color: #D9B89A;
+            margin-bottom: 16px;
+            line-height: 1.5;
+        }
+        .view-button {
+            display: inline-block;
+            padding: 12px 24px;
+            background: #E87B2A;
+            color: #FFF;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 14px;
+            transition: all 0.3s;
+        }
+        .view-button:hover {
+            background: #FFB84D;
+            color: #1A0F0A;
+        }
+        @media (max-width: 768px) {
+            h1 { font-size: 36px; }
+            .gallery { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Warm Designs</h1>
+        <p>10 variations using the warm concert aesthetic</p>
+    </div>
+
+    <div class="gallery">
+        <div class="design-card" onclick="window.open('warm1-fullscreen-overlay.html', '_blank')">
+            <div class="design-preview">1</div>
+            <div class="design-info">
+                <div class="design-title">1. Fullscreen Overlay</div>
+                <div class="design-description">Image as full background with centered overlay card</div>
+                <a href="warm1-fullscreen-overlay.html" class="view-button" target="_blank">View Design</a>
+            </div>
+        </div>
+
+        <div class="design-card" onclick="window.open('warm2-split-screen.html', '_blank')">
+            <div class="design-preview">2</div>
+            <div class="design-info">
+                <div class="design-title">2. Split Screen</div>
+                <div class="design-description">50/50 layout: image left, content right</div>
+                <a href="warm2-split-screen.html" class="view-button" target="_blank">View Design</a>
+            </div>
+        </div>
+
+        <div class="design-card" onclick="window.open('warm3-floating-card.html', '_blank')">
+            <div class="design-preview">3</div>
+            <div class="design-info">
+                <div class="design-title">3. Floating Card</div>
+                <div class="design-description">Blurred image background with floating content card</div>
+                <a href="warm3-floating-card.html" class="view-button" target="_blank">View Design</a>
+            </div>
+        </div>
+
+        <div class="design-card" onclick="window.open('warm4-stacked-sections.html', '_blank')">
+            <div class="design-preview">4</div>
+            <div class="design-info">
+                <div class="design-title">4. Stacked Sections</div>
+                <div class="design-description">Hero image on top, content sections below</div>
+                <a href="warm4-stacked-sections.html" class="view-button" target="_blank">View Design</a>
+            </div>
+        </div>
+
+        <div class="design-card" onclick="window.open('warm5-circular-hero.html', '_blank')">
+            <div class="design-preview">5</div>
+            <div class="design-info">
+                <div class="design-title">5. Circular Hero</div>
+                <div class="design-description">Large circular image with side-by-side layout</div>
+                <a href="warm5-circular-hero.html" class="view-button" target="_blank">View Design</a>
+            </div>
+        </div>
+
+        <div class="design-card" onclick="window.open('warm6-minimalist-center.html', '_blank')">
+            <div class="design-preview">6</div>
+            <div class="design-info">
+                <div class="design-title">6. Minimalist Center</div>
+                <div class="design-description">Centered layout with horizontal image strip</div>
+                <a href="warm6-minimalist-center.html" class="view-button" target="_blank">View Design</a>
+            </div>
+        </div>
+
+        <div class="design-card" onclick="window.open('warm7-asymmetric.html', '_blank')">
+            <div class="design-preview">7</div>
+            <div class="design-info">
+                <div class="design-title">7. Asymmetric Layout</div>
+                <div class="design-description">Uneven grid: narrow content, wide image</div>
+                <a href="warm7-asymmetric.html" class="view-button" target="_blank">View Design</a>
+            </div>
+        </div>
+
+        <div class="design-card" onclick="window.open('warm8-magazine.html', '_blank')">
+            <div class="design-preview">8</div>
+            <div class="design-info">
+                <div class="design-title">8. Magazine Style</div>
+                <div class="design-description">Editorial layout with large featured image</div>
+                <a href="warm8-magazine.html" class="view-button" target="_blank">View Design</a>
+            </div>
+        </div>
+
+        <div class="design-card" onclick="window.open('warm9-compact.html', '_blank')">
+            <div class="design-preview">9</div>
+            <div class="design-info">
+                <div class="design-title">9. Compact Card</div>
+                <div class="design-description">Small centered card with image header</div>
+                <a href="warm9-compact.html" class="view-button" target="_blank">View Design</a>
+            </div>
+        </div>
+
+        <div class="design-card" onclick="window.open('warm10-bold-type.html', '_blank')">
+            <div class="design-preview">10</div>
+            <div class="design-info">
+                <div class="design-title">10. Bold Typography</div>
+                <div class="design-description">Massive gradient type over full-screen image</div>
+                <a href="warm10-bold-type.html" class="view-button" target="_blank">View Design</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

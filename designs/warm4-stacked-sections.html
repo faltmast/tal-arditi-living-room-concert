@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Warm 4: Stacked Sections</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background: #1A0F0A;
+            color: #FFF9F4;
+            line-height: 1.6;
+        }
+
+        .design-label {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            opacity: 0.7;
+            z-index: 10;
+        }
+
+        .hero-section {
+            height: 60vh;
+            background-image: url('../hero-image.jpg');
+            background-size: cover;
+            background-position: center 30%;
+            position: relative;
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+            padding-bottom: 60px;
+        }
+
+        .hero-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(180deg, rgba(26, 15, 10, 0.3) 0%, rgba(26, 15, 10, 0.9) 100%);
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 72px;
+            font-weight: 200;
+            letter-spacing: 10px;
+            text-shadow: 0 6px 20px rgba(0, 0, 0, 0.8);
+            margin-bottom: 16px;
+        }
+
+        .subtitle {
+            font-size: 18px;
+            letter-spacing: 4px;
+            opacity: 0.95;
+        }
+
+        .content-section {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 60px 40px;
+        }
+
+        .date-tag {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .date-tag span {
+            background: rgba(232, 123, 42, 0.15);
+            border: 1px solid #E87B2A;
+            padding: 10px 24px;
+            border-radius: 24px;
+            font-size: 13px;
+            letter-spacing: 2px;
+            display: inline-block;
+        }
+
+        .details-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            margin-bottom: 50px;
+        }
+
+        .detail-box {
+            text-align: center;
+            padding: 24px 16px;
+            background: rgba(232, 123, 42, 0.08);
+            border-radius: 12px;
+            border: 1px solid rgba(232, 123, 42, 0.2);
+        }
+
+        .detail-icon {
+            font-size: 24px;
+            margin-bottom: 12px;
+        }
+
+        .detail-label {
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            opacity: 0.7;
+            margin-bottom: 6px;
+        }
+
+        .detail-value {
+            font-size: 15px;
+            font-weight: 500;
+        }
+
+        .bio {
+            text-align: center;
+            font-size: 15px;
+            line-height: 1.8;
+            margin-bottom: 50px;
+            opacity: 0.9;
+        }
+
+        .form {
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+        }
+
+        input {
+            padding: 16px 18px;
+            background: rgba(255, 249, 244, 0.05);
+            border: 1px solid rgba(232, 123, 42, 0.3);
+            border-radius: 10px;
+            color: #FFF9F4;
+            font-size: 15px;
+        }
+
+        input::placeholder { color: rgba(255, 249, 244, 0.4); }
+        input:focus {
+            outline: none;
+            border-color: #E87B2A;
+            background: rgba(255, 249, 244, 0.08);
+        }
+
+        button {
+            padding: 18px;
+            background: #E87B2A;
+            border: none;
+            border-radius: 10px;
+            color: #FFF;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            margin-top: 8px;
+        }
+
+        button:hover { background: #C65D21; }
+
+        .note {
+            text-align: center;
+            margin-top: 24px;
+            font-size: 13px;
+            opacity: 0.7;
+            line-height: 1.6;
+        }
+
+        @media (max-width: 700px) {
+            .details-grid { grid-template-columns: 1fr; }
+            h1 { font-size: 48px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="design-label">Warm 4: Stacked Sections</div>
+
+    <div class="hero-section">
+        <div class="hero-content">
+            <h1>TAL ARDITI</h1>
+            <p class="subtitle">Living Room Concert</p>
+        </div>
+    </div>
+
+    <div class="content-section">
+        <div class="date-tag">
+            <span>February 20, 2026 · Neukölln</span>
+        </div>
+
+        <div class="details-grid">
+            <div class="detail-box">
+                <div class="detail-icon">🎵</div>
+                <div class="detail-label">Genre</div>
+                <div class="detail-value">Indie Folk</div>
+            </div>
+            <div class="detail-box">
+                <div class="detail-icon">💰</div>
+                <div class="detail-label">Price</div>
+                <div class="detail-value">10-20 EUR</div>
+            </div>
+            <div class="detail-box">
+                <div class="detail-icon">👥</div>
+                <div class="detail-label">Spots</div>
+                <div class="detail-value">20 left</div>
+            </div>
+        </div>
+
+        <p class="bio">
+            Join us for an intimate evening of looping-driven indie-folk and electronica in a cozy Berlin living room. Raw emotion meets immersive soundscapes.
+        </p>
+
+        <form class="form">
+            <input type="text" placeholder="Your name" required>
+            <input type="email" placeholder="Your email" required>
+            <button>Reserve & Pay</button>
+        </form>
+
+        <p class="note">
+            Exact location sent via email before the event<br>
+            Payment confirms your attendance
+        </p>
+    </div>
+</body>
+</html>

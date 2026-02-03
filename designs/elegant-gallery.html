@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elegant Typography Collection</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background: linear-gradient(135deg, #1A0F0A 0%, #2D1810 100%);
+            color: #FFF9F4;
+            padding: 60px 40px;
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 70px;
+        }
+        h1 {
+            font-size: 64px;
+            font-weight: 200;
+            letter-spacing: 12px;
+            margin-bottom: 20px;
+            color: #FFB84D;
+            text-transform: uppercase;
+        }
+        p {
+            font-size: 16px;
+            color: #D9B89A;
+            font-weight: 300;
+            letter-spacing: 2px;
+        }
+        .gallery {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+            gap: 40px;
+        }
+        .design-card {
+            background: rgba(45, 24, 16, 0.4);
+            border: 1px solid rgba(232, 123, 42, 0.2);
+            border-radius: 12px;
+            overflow: hidden;
+            transition: all 0.4s ease;
+            cursor: pointer;
+        }
+        .design-card:hover {
+            transform: translateY(-12px);
+            box-shadow: 0 30px 60px rgba(232, 123, 42, 0.3);
+            border-color: #E87B2A;
+        }
+        .design-preview {
+            height: 320px;
+            background: linear-gradient(135deg, #FFB84D, #E87B2A);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 28px;
+            color: #1A0F0A;
+            font-weight: 600;
+            position: relative;
+            overflow: hidden;
+        }
+        .design-preview::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(circle, transparent 30%, rgba(26, 15, 10, 0.1));
+        }
+        .design-info {
+            padding: 30px;
+        }
+        .design-title {
+            font-size: 24px;
+            font-weight: 600;
+            margin-bottom: 10px;
+            color: #FFB84D;
+        }
+        .design-description {
+            font-size: 14px;
+            color: #D9B89A;
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+        .view-button {
+            display: inline-block;
+            padding: 14px 28px;
+            background: transparent;
+            color: #E87B2A;
+            text-decoration: none;
+            border: 1px solid #E87B2A;
+            border-radius: 4px;
+            font-weight: 600;
+            font-size: 12px;
+            transition: all 0.3s;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+        }
+        .view-button:hover {
+            background: #E87B2A;
+            color: #1A0F0A;
+        }
+        @media (max-width: 768px) {
+            h1 { font-size: 36px; letter-spacing: 6px; }
+            .gallery { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Elegant</h1>
+        <p>Experimental & UX-Focused Typography</p>
+    </div>
+
+    <div class="gallery">
+        <div class="design-card" onclick="window.open('elegant1-ultra-light.html', '_blank')">
+            <div class="design-preview" style="font-family: 'Inter', sans-serif; font-weight: 100; font-size: 48px; letter-spacing: 12px;">TAL</div>
+            <div class="design-info">
+                <div class="design-title">1. Ultra Light Sans</div>
+                <div class="design-description">Inter weight 100 with extreme tracking. Ultra-minimalist and architectural. Sophisticated breathing room.</div>
+                <a href="elegant1-ultra-light.html" class="view-button" target="_blank">View Design</a>
+            </div>
+        </div>
+
+        <div class="design-card" onclick="window.open('elegant2-mixed-weight.html', '_blank')">
+            <div class="design-preview" style="font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: 32px;">TAL<br><span style="font-weight: 200; font-size: 42px; letter-spacing: 6px;">ARDITI</span></div>
+            <div class="design-info">
+                <div class="design-title">2. Mixed Weight</div>
+                <div class="design-description">Montserrat with contrasting weights. Bold + ultra-light creates dynamic hierarchy and visual interest.</div>
+                <a href="elegant2-mixed-weight.html" class="view-button" target="_blank">View Design</a>
+            </div>
+        </div>
+
+        <div class="design-card" onclick="window.open('elegant3-editorial.html', '_blank')">
+            <div class="design-preview" style="font-family: 'Georgia', serif; font-style: italic; font-size: 52px; font-weight: 300;">Tal</div>
+            <div class="design-info">
+                <div class="design-title">3. Editorial Serif</div>
+                <div class="design-description">Cormorant Garamond italic paired with Lato sans. Magazine-quality with underline inputs for sophistication.</div>
+                <a href="elegant3-editorial.html" class="view-button" target="_blank">View Design</a>
+            </div>
+        </div>
+
+        <div class="design-card" onclick="window.open('elegant4-wide-minimal.html', '_blank')">
+            <div class="design-preview" style="font-family: 'Work Sans', sans-serif; font-weight: 200; font-size: 36px; letter-spacing: 18px;">TAL</div>
+            <div class="design-info">
+                <div class="design-title">4. Wide Minimal</div>
+                <div class="design-description">Work Sans with extreme letter spacing. Clean grid layout. Maximum whitespace for calm, focused experience.</div>
+                <a href="elegant4-wide-minimal.html" class="view-button" target="_blank">View Design</a>
+            </div>
+        </div>
+
+        <div class="design-card" onclick="window.open('elegant5-contrast.html', '_blank')">
+            <div class="design-preview" style="font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 38px;">TAL<br><span style="font-weight: 300; font-size: 26px;">ARDITI</span></div>
+            <div class="design-info">
+                <div class="design-title">5. High Contrast</div>
+                <div class="design-description">Space Grotesk with gradient button and highlight boxes. Modern with visual punch and clear CTAs.</div>
+                <a href="elegant5-contrast.html" class="view-button" target="_blank">View Design</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

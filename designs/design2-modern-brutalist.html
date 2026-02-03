@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Design 2: Modern Brutalist</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Arial', 'Helvetica', sans-serif;
+            background: #F0F0F0;
+            color: #000;
+            line-height: 1.5;
+            min-height: 100vh;
+            padding: 40px 20px;
+        }
+
+        .design-label {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            opacity: 0.5;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .header {
+            background: #000;
+            color: #FFF;
+            padding: 60px 40px;
+            margin-bottom: 4px;
+        }
+
+        .concert-title {
+            font-size: 96px;
+            font-weight: 900;
+            line-height: 0.9;
+            letter-spacing: -2px;
+        }
+
+        .subtitle {
+            font-size: 18px;
+            font-weight: 700;
+            margin-top: 20px;
+            text-transform: uppercase;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 4px;
+            margin-bottom: 4px;
+        }
+
+        .grid-item {
+            background: #FFF;
+            padding: 40px;
+            border: 3px solid #000;
+        }
+
+        .grid-item h3 {
+            font-size: 12px;
+            font-weight: 900;
+            text-transform: uppercase;
+            margin-bottom: 12px;
+        }
+
+        .grid-item p {
+            font-size: 24px;
+            font-weight: 700;
+        }
+
+        .bio-section {
+            background: #FFE500;
+            padding: 40px;
+            border: 3px solid #000;
+            margin-bottom: 4px;
+        }
+
+        .bio-section p {
+            font-size: 16px;
+            font-weight: 500;
+            max-width: 600px;
+        }
+
+        .form-section {
+            background: #FFF;
+            padding: 40px;
+            border: 3px solid #000;
+        }
+
+        .form-section h2 {
+            font-size: 32px;
+            font-weight: 900;
+            text-transform: uppercase;
+            margin-bottom: 30px;
+        }
+
+        .form {
+            display: grid;
+            gap: 16px;
+        }
+
+        input {
+            padding: 20px;
+            border: 3px solid #000;
+            font-size: 16px;
+            font-weight: 700;
+            font-family: inherit;
+        }
+
+        input:focus {
+            outline: none;
+            background: #FFE500;
+        }
+
+        button {
+            padding: 24px;
+            background: #000;
+            color: #FFF;
+            border: none;
+            font-size: 18px;
+            font-weight: 900;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        button:hover {
+            background: #FFE500;
+            color: #000;
+        }
+
+        .note {
+            font-size: 13px;
+            margin-top: 20px;
+            font-weight: 500;
+        }
+
+        @media (max-width: 768px) {
+            .grid { grid-template-columns: 1fr; }
+            .concert-title { font-size: 64px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="design-label">Design 2: Modern Brutalist</div>
+
+    <div class="container">
+        <div class="header">
+            <h1 class="concert-title">TAL<br>ARDITI</h1>
+            <p class="subtitle">Living Room Concert · Feb 20</p>
+        </div>
+
+        <div class="grid">
+            <div class="grid-item">
+                <h3>Date</h3>
+                <p>Feb 20, 2026</p>
+            </div>
+            <div class="grid-item">
+                <h3>Location</h3>
+                <p>Neukölln</p>
+            </div>
+            <div class="grid-item">
+                <h3>Price</h3>
+                <p>10-20 EUR</p>
+            </div>
+            <div class="grid-item">
+                <h3>Spots</h3>
+                <p>20 left</p>
+            </div>
+        </div>
+
+        <div class="bio-section">
+            <p>Berlin-based artist blending indie, folk, and electronica with raw emotion. Known for intimate, looping-driven performances that create immersive soundscapes.</p>
+        </div>
+
+        <div class="form-section">
+            <h2>Reserve</h2>
+            <form class="form">
+                <input type="text" placeholder="NAME" required>
+                <input type="email" placeholder="EMAIL" required>
+                <button type="submit">SUBMIT</button>
+            </form>
+            <p class="note">Location sent via email. Payment confirms attendance.</p>
+        </div>
+    </div>
+</body>
+</html>

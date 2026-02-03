@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Design 1: Elegant Minimal</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Cormorant Garamond', 'Georgia', serif;
+            background: #FFFFFF;
+            color: #000000;
+            line-height: 1.8;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 40px 20px;
+        }
+
+        .container {
+            max-width: 600px;
+            width: 100%;
+            text-align: center;
+        }
+
+        .design-label {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            opacity: 0.5;
+        }
+
+        .concert-title {
+            font-size: 72px;
+            font-weight: 300;
+            letter-spacing: 8px;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+
+        .divider {
+            width: 60px;
+            height: 1px;
+            background: #000;
+            margin: 30px auto;
+        }
+
+        .subtitle {
+            font-size: 14px;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            margin-bottom: 60px;
+            opacity: 0.7;
+        }
+
+        .details {
+            margin-bottom: 60px;
+        }
+
+        .detail-row {
+            display: flex;
+            justify-content: space-between;
+            padding: 20px 0;
+            border-top: 1px solid #E8E8E8;
+        }
+
+        .detail-row:last-child {
+            border-bottom: 1px solid #E8E8E8;
+        }
+
+        .detail-label {
+            font-size: 12px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            opacity: 0.6;
+        }
+
+        .detail-value {
+            font-size: 14px;
+        }
+
+        .bio {
+            margin: 60px 0;
+            font-size: 16px;
+            line-height: 1.8;
+            opacity: 0.8;
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .form {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            margin-bottom: 30px;
+        }
+
+        input {
+            padding: 16px;
+            border: 1px solid #E8E8E8;
+            background: #FAFAFA;
+            font-size: 14px;
+            font-family: inherit;
+            text-align: center;
+            transition: all 0.3s;
+        }
+
+        input:focus {
+            outline: none;
+            border-color: #000;
+            background: #FFF;
+        }
+
+        button {
+            padding: 18px 40px;
+            background: #000;
+            color: #FFF;
+            border: none;
+            font-size: 12px;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-family: inherit;
+        }
+
+        button:hover {
+            background: #333;
+        }
+
+        .note {
+            font-size: 12px;
+            opacity: 0.6;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+<body>
+    <div class="design-label">Design 1: Elegant Minimal</div>
+
+    <div class="container">
+        <h1 class="concert-title">TAL<br>ARDITI</h1>
+        <div class="divider"></div>
+        <p class="subtitle">Living Room Concert</p>
+
+        <div class="details">
+            <div class="detail-row">
+                <span class="detail-label">Date</span>
+                <span class="detail-value">February 20, 2026</span>
+            </div>
+            <div class="detail-row">
+                <span class="detail-label">Location</span>
+                <span class="detail-value">Neukölln, Berlin</span>
+            </div>
+            <div class="detail-row">
+                <span class="detail-label">Price</span>
+                <span class="detail-value">10-20 EUR</span>
+            </div>
+            <div class="detail-row">
+                <span class="detail-label">Capacity</span>
+                <span class="detail-value">20 spots</span>
+            </div>
+        </div>
+
+        <p class="bio">Berlin-based artist blending indie, folk, and electronica with raw emotion. Known for intimate, looping-driven performances that create immersive soundscapes.</p>
+
+        <form class="form">
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <button type="submit">Reserve Your Spot</button>
+        </form>
+
+        <p class="note">
+            The exact location will be sent via email before the event.<br>
+            Once you've paid, your attendance is confirmed.
+        </p>
+    </div>
+</body>
+</html>

@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Design 6: Dark Luxury</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Playfair Display', 'Georgia', serif;
+            background: #0A0A0A;
+            color: #F5F5F5;
+            line-height: 1.7;
+            min-height: 100vh;
+            padding: 60px 20px;
+        }
+
+        .design-label {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: #D4AF37;
+            opacity: 0.7;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background: linear-gradient(135deg, #1A1A1A 0%, #0F0F0F 100%);
+            border: 1px solid #D4AF37;
+            padding: 0;
+            position: relative;
+        }
+
+        .container::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, transparent, #D4AF37, transparent);
+        }
+
+        .header {
+            text-align: center;
+            padding: 60px 40px 50px;
+            background: linear-gradient(180deg, rgba(212, 175, 55, 0.05) 0%, transparent 100%);
+        }
+
+        .ornament {
+            color: #D4AF37;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        .concert-title {
+            font-size: 64px;
+            font-weight: 400;
+            font-style: italic;
+            letter-spacing: 4px;
+            margin-bottom: 16px;
+            color: #D4AF37;
+        }
+
+        .subtitle {
+            font-size: 14px;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            color: #A0A0A0;
+            font-family: 'Arial', sans-serif;
+        }
+
+        .divider {
+            width: 100px;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, #D4AF37, transparent);
+            margin: 40px auto;
+        }
+
+        .details {
+            padding: 40px 50px;
+        }
+
+        .detail-row {
+            display: flex;
+            justify-content: space-between;
+            padding: 20px 0;
+            border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+            font-family: 'Arial', sans-serif;
+        }
+
+        .detail-label {
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: #D4AF37;
+        }
+
+        .detail-value {
+            font-size: 14px;
+            color: #F5F5F5;
+        }
+
+        .bio {
+            padding: 40px 50px;
+            font-size: 16px;
+            line-height: 1.8;
+            text-align: center;
+            color: #C0C0C0;
+            background: rgba(212, 175, 55, 0.03);
+            font-style: italic;
+        }
+
+        .form-section {
+            padding: 40px 50px 50px;
+        }
+
+        .form-title {
+            text-align: center;
+            font-size: 24px;
+            font-weight: 400;
+            letter-spacing: 3px;
+            margin-bottom: 30px;
+            color: #D4AF37;
+        }
+
+        .form {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        input {
+            padding: 16px 20px;
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(212, 175, 55, 0.3);
+            color: #F5F5F5;
+            font-size: 14px;
+            font-family: 'Arial', sans-serif;
+            transition: all 0.3s;
+        }
+
+        input::placeholder {
+            color: #666;
+        }
+
+        input:focus {
+            outline: none;
+            border-color: #D4AF37;
+            background: rgba(255, 255, 255, 0.05);
+        }
+
+        button {
+            padding: 18px;
+            background: #D4AF37;
+            color: #0A0A0A;
+            border: none;
+            font-size: 13px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-family: 'Arial', sans-serif;
+        }
+
+        button:hover {
+            background: #F4CF5F;
+        }
+
+        .note {
+            text-align: center;
+            font-size: 12px;
+            color: #808080;
+            margin-top: 30px;
+            line-height: 1.7;
+            font-family: 'Arial', sans-serif;
+        }
+
+        @media (max-width: 600px) {
+            .concert-title { font-size: 48px; }
+            .details, .bio, .form-section { padding-left: 30px; padding-right: 30px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="design-label">Design 6: Dark Luxury</div>
+
+    <div class="container">
+        <div class="header">
+            <div class="ornament">◆</div>
+            <h1 class="concert-title">Tal Arditi</h1>
+            <p class="subtitle">Living Room Concert</p>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="details">
+            <div class="detail-row">
+                <span class="detail-label">Date</span>
+                <span class="detail-value">February 20, 2026</span>
+            </div>
+            <div class="detail-row">
+                <span class="detail-label">Location</span>
+                <span class="detail-value">Neukölln, Berlin</span>
+            </div>
+            <div class="detail-row">
+                <span class="detail-label">Investment</span>
+                <span class="detail-value">10-20 EUR Sliding Scale</span>
+            </div>
+            <div class="detail-row">
+                <span class="detail-label">Capacity</span>
+                <span class="detail-value">20 Exclusive Spots</span>
+            </div>
+        </div>
+
+        <div class="bio">
+            An intimate evening with Berlin's rising indie-folk artist.<br>
+            Looping-driven performances that create immersive soundscapes.
+        </div>
+
+        <div class="form-section">
+            <h2 class="form-title">Reserve</h2>
+            <form class="form">
+                <input type="text" placeholder="Your Name" required>
+                <input type="email" placeholder="Your Email" required>
+                <button type="submit">CONFIRM ATTENDANCE</button>
+            </form>
+            <p class="note">
+                Private address details will be sent via email.<br>
+                Payment confirms your reservation.
+            </p>
+        </div>
+    </div>
+</body>
+</html>

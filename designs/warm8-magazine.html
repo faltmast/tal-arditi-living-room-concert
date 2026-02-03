@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Warm 8: Magazine Style</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background: #FFF9F4;
+            color: #1A0F0A;
+            line-height: 1.6;
+            padding: 60px 40px;
+        }
+        .design-label {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            opacity: 0.5;
+            z-index: 10;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+        .eyebrow {
+            font-size: 12px;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: #E87B2A;
+            margin-bottom: 16px;
+        }
+        h1 {
+            font-size: 72px;
+            font-weight: 200;
+            letter-spacing: 8px;
+            color: #1A0F0A;
+            margin-bottom: 20px;
+        }
+        .subtitle {
+            font-size: 18px;
+            color: #7A5C3E;
+        }
+        .featured-image {
+            width: 100%;
+            height: 500px;
+            background-image: url('../hero-image.jpg');
+            background-size: cover;
+            background-position: center 30%;
+            margin-bottom: 60px;
+            border: 8px solid #E87B2A;
+        }
+        .content-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            margin-bottom: 60px;
+        }
+        .details-col h2 {
+            font-size: 24px;
+            font-weight: 500;
+            margin-bottom: 30px;
+            color: #E87B2A;
+        }
+        .detail-list {
+            list-style: none;
+        }
+        .detail-list li {
+            padding: 16px 0;
+            border-bottom: 1px solid #E8D5C4;
+            display: flex;
+            justify-content: space-between;
+        }
+        .detail-label {
+            font-weight: 600;
+            text-transform: uppercase;
+            font-size: 12px;
+            letter-spacing: 1.5px;
+        }
+        .form-col h2 {
+            font-size: 24px;
+            font-weight: 500;
+            margin-bottom: 30px;
+            color: #E87B2A;
+        }
+        .form {
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+        }
+        input {
+            padding: 16px;
+            background: #FFF;
+            border: 2px solid #E8D5C4;
+            font-size: 15px;
+        }
+        input:focus {
+            outline: none;
+            border-color: #E87B2A;
+        }
+        button {
+            padding: 18px;
+            background: #1A0F0A;
+            color: #FFF9F4;
+            border: none;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            margin-top: 8px;
+        }
+        button:hover { background: #2D1810; }
+        .note {
+            margin-top: 24px;
+            font-size: 13px;
+            color: #7A5C3E;
+            line-height: 1.6;
+        }
+        @media (max-width: 800px) {
+            .content-grid { grid-template-columns: 1fr; }
+            h1 { font-size: 48px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="design-label">Warm 8: Magazine</div>
+    <div class="container">
+        <div class="header">
+            <div class="eyebrow">Live in Concert</div>
+            <h1>TAL ARDITI</h1>
+            <p class="subtitle">An intimate living room performance</p>
+        </div>
+
+        <div class="featured-image"></div>
+
+        <div class="content-grid">
+            <div class="details-col">
+                <h2>Event Details</h2>
+                <ul class="detail-list">
+                    <li>
+                        <span class="detail-label">Date</span>
+                        <span>Feb 20, 2026</span>
+                    </li>
+                    <li>
+                        <span class="detail-label">Location</span>
+                        <span>Neukölln</span>
+                    </li>
+                    <li>
+                        <span class="detail-label">Price</span>
+                        <span>10-20 EUR</span>
+                    </li>
+                    <li>
+                        <span class="detail-label">Capacity</span>
+                        <span>20 spots</span>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="form-col">
+                <h2>Reserve Your Spot</h2>
+                <form class="form">
+                    <input type="text" placeholder="Name" required>
+                    <input type="email" placeholder="Email" required>
+                    <button>Submit</button>
+                </form>
+                <p class="note">
+                    Location details sent via email before event.<br>
+                    Payment confirms your attendance.
+                </p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

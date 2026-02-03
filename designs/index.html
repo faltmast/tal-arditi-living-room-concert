@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Design Gallery - Tal Arditi Concert</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background: #1A1A1A;
+            color: #FFF;
+            padding: 60px 40px;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        h1 {
+            font-size: 48px;
+            font-weight: 300;
+            margin-bottom: 16px;
+        }
+
+        p {
+            font-size: 18px;
+            color: #999;
+        }
+
+        .gallery {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .design-card {
+            background: #2A2A2A;
+            border-radius: 16px;
+            overflow: hidden;
+            transition: all 0.3s;
+            cursor: pointer;
+        }
+
+        .design-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+        }
+
+        .design-preview {
+            height: 300px;
+            background: #FFF;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 48px;
+        }
+
+        .design-info {
+            padding: 24px;
+        }
+
+        .design-title {
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+
+        .design-description {
+            font-size: 14px;
+            color: #999;
+            margin-bottom: 16px;
+        }
+
+        .view-button {
+            display: inline-block;
+            padding: 12px 24px;
+            background: #FFF;
+            color: #1A1A1A;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 14px;
+            transition: all 0.3s;
+        }
+
+        .view-button:hover {
+            background: #E0E0E0;
+        }
+
+        @media (max-width: 768px) {
+            h1 { font-size: 36px; }
+            .gallery { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Design Gallery</h1>
+        <p>10 unique designs for Tal Arditi's living room concert</p>
+    </div>
+
+    <div class="gallery">
+        <div class="design-card" onclick="window.open('design1-elegant-minimal.html', '_blank')">
+            <div class="design-preview" style="background: #FFFFFF; color: #000;">✨</div>
+            <div class="design-info">
+                <div class="design-title">1. Elegant Minimal</div>
+                <div class="design-description">Classic black & white, lots of breathing room</div>
+                <a href="design1-elegant-minimal.html" class="view-button" target="_blank">View Design</a>
+            </div>
+        </div>
+
+        <div class="design-card" onclick="window.open('design2-modern-brutalist.html', '_blank')">
+            <div class="design-preview" style="background: #FFE500; color: #000;">▪</div>
+            <div class="design-info">
+                <div class="design-title">2. Modern Brutalist</div>
+                <div class="design-description">Bold grid, high contrast, yellow accents</div>
+                <a href="design2-modern-brutalist.html" class="view-button" target="_blank">View Design</a>
+            </div>
+        </div>
+
+        <div class="design-card" onclick="window.open('design3-cute-playful.html', '_blank')">
+            <div class="design-preview" style="background: linear-gradient(135deg, #FFE8E8, #E8F0FF); color: #FF6B9D;">🎸</div>
+            <div class="design-info">
+                <div class="design-title">3. Cute & Playful</div>
+                <div class="design-description">Pastel gradients, rounded corners, emojis</div>
+                <a href="design3-cute-playful.html" class="view-button" target="_blank">View Design</a>
+            </div>
+        </div>
+
+        <div class="design-card" onclick="window.open('design4-vintage-poster.html', '_blank')">
+            <div class="design-preview" style="background: #FFF9F0; color: #8B4513;">★</div>
+            <div class="design-info">
+                <div class="design-title">4. Vintage Poster</div>
+                <div class="design-description">Retro concert poster aesthetic</div>
+                <a href="design4-vintage-poster.html" class="view-button" target="_blank">View Design</a>
+            </div>
+        </div>
+
+        <div class="design-card" onclick="window.open('design5-glassmorphism.html', '_blank')">
+            <div class="design-preview" style="background: linear-gradient(135deg, #667eea, #764ba2); color: #FFF;">◇</div>
+            <div class="design-info">
+                <div class="design-title">5. Glassmorphism</div>
+                <div class="design-description">Frosted glass effects, modern & sleek</div>
+                <a href="design5-glassmorphism.html" class="view-button" target="_blank">View Design</a>
+            </div>
+        </div>
+
+        <div class="design-card" onclick="window.open('design6-dark-luxury.html', '_blank')">
+            <div class="design-preview" style="background: #0A0A0A; color: #D4AF37;">◆</div>
+            <div class="design-info">
+                <div class="design-title">6. Dark Luxury</div>
+                <div class="design-description">Black & gold, premium elegant feel</div>
+                <a href="design6-dark-luxury.html" class="view-button" target="_blank">View Design</a>
+            </div>
+        </div>
+
+        <div class="design-card" onclick="window.open('design7-indie-folk.html', '_blank')">
+            <div class="design-preview" style="background: #FFFBF5; color: #7A5C3E;">🌿</div>
+            <div class="design-info">
+                <div class="design-title">7. Indie Folk</div>
+                <div class="design-description">Earthy tones, hand-drawn aesthetic</div>
+                <a href="design7-indie-folk.html" class="view-button" target="_blank">View Design</a>
+            </div>
+        </div>
+
+        <div class="design-card" onclick="window.open('design8-neon-night.html', '_blank')">
+            <div class="design-preview" style="background: #000; color: #FF00FF;">●</div>
+            <div class="design-info">
+                <div class="design-title">8. Neon Night</div>
+                <div class="design-description">Cyberpunk vibes, glowing neon accents</div>
+                <a href="design8-neon-night.html" class="view-button" target="_blank">View Design</a>
+            </div>
+        </div>
+
+        <div class="design-card" onclick="window.open('design9-minimalist-zen.html', '_blank')">
+            <div class="design-preview" style="background: #FAFAFA; color: #1A1A1A;">○</div>
+            <div class="design-info">
+                <div class="design-title">9. Minimalist Zen</div>
+                <div class="design-description">Ultra-minimal, maximum breathing room</div>
+                <a href="design9-minimalist-zen.html" class="view-button" target="_blank">View Design</a>
+            </div>
+        </div>
+
+        <div class="design-card" onclick="window.open('design10-playful-gradient.html', '_blank')">
+            <div class="design-preview" style="background: linear-gradient(-45deg, #FF6B6B, #FFE66D, #4ECDC4); color: #FFF;">🎵</div>
+            <div class="design-info">
+                <div class="design-title">10. Playful Gradient</div>
+                <div class="design-description">Animated colorful gradients, fun energy</div>
+                <a href="design10-playful-gradient.html" class="view-button" target="_blank">View Design</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

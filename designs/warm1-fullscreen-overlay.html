@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Warm 1: Fullscreen Overlay</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background: #1A0F0A;
+            color: #FFF9F4;
+            line-height: 1.6;
+            min-height: 100vh;
+            position: relative;
+        }
+
+        .bg-image {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('../hero-image.jpg');
+            background-size: cover;
+            background-position: center;
+            filter: brightness(0.4);
+            z-index: 0;
+        }
+
+        .design-label {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            opacity: 0.7;
+            z-index: 10;
+        }
+
+        .container {
+            position: relative;
+            z-index: 1;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 60px 20px;
+        }
+
+        .content {
+            max-width: 500px;
+            text-align: center;
+        }
+
+        .badge {
+            display: inline-block;
+            background: rgba(232, 123, 42, 0.9);
+            padding: 8px 20px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 600;
+            letter-spacing: 1px;
+            margin-bottom: 24px;
+        }
+
+        h1 {
+            font-size: 72px;
+            font-weight: 200;
+            letter-spacing: 8px;
+            margin-bottom: 16px;
+            text-shadow: 0 4px 20px rgba(0, 0, 0, 0.8);
+        }
+
+        .subtitle {
+            font-size: 18px;
+            letter-spacing: 3px;
+            margin-bottom: 50px;
+            opacity: 0.9;
+        }
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 12px;
+            margin-bottom: 40px;
+        }
+
+        .info-item {
+            background: rgba(26, 15, 10, 0.7);
+            backdrop-filter: blur(10px);
+            padding: 20px;
+            border-radius: 12px;
+            border: 1px solid rgba(232, 123, 42, 0.3);
+        }
+
+        .info-label {
+            font-size: 11px;
+            opacity: 0.7;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            margin-bottom: 6px;
+        }
+
+        .info-value {
+            font-size: 16px;
+            font-weight: 500;
+        }
+
+        .form {
+            background: rgba(26, 15, 10, 0.85);
+            backdrop-filter: blur(20px);
+            padding: 32px;
+            border-radius: 16px;
+            border: 1px solid rgba(232, 123, 42, 0.4);
+        }
+
+        input {
+            width: 100%;
+            padding: 14px 16px;
+            margin-bottom: 12px;
+            background: rgba(255, 249, 244, 0.08);
+            border: 1px solid rgba(232, 123, 42, 0.3);
+            border-radius: 10px;
+            color: #FFF9F4;
+            font-size: 15px;
+        }
+
+        input::placeholder { color: rgba(255, 249, 244, 0.5); }
+        input:focus {
+            outline: none;
+            border-color: #E87B2A;
+            background: rgba(255, 249, 244, 0.12);
+        }
+
+        button {
+            width: 100%;
+            padding: 16px;
+            background: linear-gradient(135deg, #E87B2A, #C65D21);
+            border: none;
+            border-radius: 10px;
+            color: #FFF;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            box-shadow: 0 8px 24px rgba(232, 123, 42, 0.4);
+        }
+
+        button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 12px 32px rgba(232, 123, 42, 0.5);
+        }
+
+        .note {
+            margin-top: 20px;
+            font-size: 13px;
+            opacity: 0.8;
+        }
+    </style>
+</head>
+<body>
+    <div class="bg-image"></div>
+    <div class="design-label">Warm 1: Fullscreen Overlay</div>
+
+    <div class="container">
+        <div class="content">
+            <div class="badge">Feb 20, 2026</div>
+            <h1>TAL ARDITI</h1>
+            <p class="subtitle">Living Room Concert</p>
+
+            <div class="info-grid">
+                <div class="info-item">
+                    <div class="info-label">Location</div>
+                    <div class="info-value">Neukölln</div>
+                </div>
+                <div class="info-item">
+                    <div class="info-label">Price</div>
+                    <div class="info-value">10-20 EUR</div>
+                </div>
+                <div class="info-item">
+                    <div class="info-label">Time</div>
+                    <div class="info-value">Evening</div>
+                </div>
+                <div class="info-item">
+                    <div class="info-label">Capacity</div>
+                    <div class="info-value">20 spots</div>
+                </div>
+            </div>
+
+            <div class="form">
+                <input type="text" placeholder="Your name" required>
+                <input type="email" placeholder="Your email" required>
+                <button>Reserve Your Spot</button>
+                <p class="note">Location sent via email · Payment confirms attendance</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

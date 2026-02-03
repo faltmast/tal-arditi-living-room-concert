@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Warm 10: Bold Typography</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background: #1A0F0A;
+            color: #FFF9F4;
+            line-height: 1.6;
+        }
+        .design-label {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            opacity: 0.7;
+            z-index: 10;
+        }
+        .container {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        .hero {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-image: url('../hero-image.jpg');
+            background-size: cover;
+            background-position: center 30%;
+            position: relative;
+            padding: 80px 40px;
+        }
+        .hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: rgba(26, 15, 10, 0.7);
+        }
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+            max-width: 800px;
+        }
+        h1 {
+            font-size: 120px;
+            font-weight: 900;
+            letter-spacing: -2px;
+            line-height: 0.9;
+            margin-bottom: 30px;
+            text-transform: uppercase;
+            background: linear-gradient(135deg, #FFB84D, #E87B2A);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .tagline {
+            font-size: 24px;
+            letter-spacing: 4px;
+            font-weight: 200;
+            margin-bottom: 60px;
+        }
+        .info-bar {
+            background: rgba(232, 123, 42, 0.95);
+            padding: 20px 40px;
+            display: flex;
+            justify-content: center;
+            gap: 60px;
+            flex-wrap: wrap;
+        }
+        .info-item {
+            text-align: center;
+        }
+        .info-label {
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            opacity: 0.8;
+            margin-bottom: 6px;
+        }
+        .info-value {
+            font-size: 18px;
+            font-weight: 700;
+        }
+        .form-section {
+            background: #2D1810;
+            padding: 60px 40px;
+            display: flex;
+            justify-content: center;
+        }
+        .form-container {
+            max-width: 500px;
+            width: 100%;
+        }
+        .form-title {
+            font-size: 32px;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 30px;
+            color: #FFB84D;
+        }
+        .form {
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+        }
+        input {
+            padding: 18px 20px;
+            background: rgba(255, 249, 244, 0.05);
+            border: 1px solid rgba(232, 123, 42, 0.3);
+            border-radius: 8px;
+            color: #FFF9F4;
+            font-size: 16px;
+        }
+        input::placeholder { color: rgba(255, 249, 244, 0.4); }
+        input:focus {
+            outline: none;
+            border-color: #E87B2A;
+            background: rgba(255, 249, 244, 0.08);
+        }
+        button {
+            padding: 20px;
+            background: #E87B2A;
+            border: none;
+            border-radius: 8px;
+            color: #FFF;
+            font-size: 18px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+        button:hover {
+            background: #FFB84D;
+            color: #1A0F0A;
+        }
+        .note {
+            text-align: center;
+            margin-top: 24px;
+            font-size: 13px;
+            opacity: 0.7;
+            line-height: 1.6;
+        }
+        @media (max-width: 768px) {
+            h1 { font-size: 64px; }
+            .tagline { font-size: 18px; }
+            .info-bar { gap: 30px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="design-label">Warm 10: Bold Typography</div>
+    <div class="container">
+        <div class="hero">
+            <div class="hero-content">
+                <h1>TAL<br>ARDITI</h1>
+                <p class="tagline">Living Room Concert</p>
+            </div>
+        </div>
+
+        <div class="info-bar">
+            <div class="info-item">
+                <div class="info-label">Date</div>
+                <div class="info-value">Feb 20, 2026</div>
+            </div>
+            <div class="info-item">
+                <div class="info-label">Location</div>
+                <div class="info-value">Neukölln</div>
+            </div>
+            <div class="info-item">
+                <div class="info-label">Price</div>
+                <div class="info-value">10-20 EUR</div>
+            </div>
+            <div class="info-item">
+                <div class="info-label">Capacity</div>
+                <div class="info-value">20 spots</div>
+            </div>
+        </div>
+
+        <div class="form-section">
+            <div class="form-container">
+                <h2 class="form-title">Get Your Spot</h2>
+                <form class="form">
+                    <input type="text" placeholder="Your name" required>
+                    <input type="email" placeholder="Your email" required>
+                    <button>Reserve Now</button>
+                </form>
+                <p class="note">
+                    Location sent via email before event<br>
+                    Payment confirms attendance
+                </p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

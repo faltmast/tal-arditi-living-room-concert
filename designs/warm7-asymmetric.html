@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Warm 7: Asymmetric Layout</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background: #2D1810;
+            color: #FFF9F4;
+            line-height: 1.6;
+            min-height: 100vh;
+        }
+        .design-label {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            opacity: 0.7;
+            z-index: 10;
+            color: #FFB84D;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: 2fr 3fr;
+            min-height: 100vh;
+        }
+        .left-col {
+            background: #1A0F0A;
+            padding: 80px 50px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        h1 {
+            font-size: 64px;
+            font-weight: 200;
+            letter-spacing: 4px;
+            color: #FFB84D;
+            line-height: 1.1;
+            margin-bottom: 20px;
+        }
+        .subtitle {
+            font-size: 15px;
+            letter-spacing: 2px;
+            color: #D9B89A;
+            margin-bottom: 50px;
+        }
+        .accent-line {
+            width: 100px;
+            height: 3px;
+            background: #E87B2A;
+            margin: 40px 0;
+        }
+        .info {
+            font-size: 14px;
+            line-height: 2;
+            margin-bottom: 40px;
+        }
+        .form {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+        input {
+            padding: 14px 16px;
+            background: rgba(255, 249, 244, 0.05);
+            border: 1px solid rgba(232, 123, 42, 0.3);
+            border-radius: 8px;
+            color: #FFF9F4;
+            font-size: 14px;
+        }
+        input::placeholder { color: rgba(255, 249, 244, 0.4); }
+        input:focus {
+            outline: none;
+            border-color: #E87B2A;
+        }
+        button {
+            padding: 16px;
+            background: #E87B2A;
+            border: none;
+            border-radius: 8px;
+            color: #FFF;
+            font-size: 15px;
+            font-weight: 600;
+            cursor: pointer;
+        }
+        button:hover { background: #C65D21; }
+        .right-col {
+            background-image: url('../hero-image.jpg');
+            background-size: cover;
+            background-position: center 30%;
+            position: relative;
+        }
+        .right-col::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: rgba(26, 15, 10, 0.3);
+        }
+        .badge {
+            position: absolute;
+            top: 60px;
+            right: 60px;
+            background: rgba(232, 123, 42, 0.95);
+            padding: 12px 24px;
+            border-radius: 24px;
+            font-size: 13px;
+            font-weight: 600;
+            letter-spacing: 1px;
+        }
+        .note {
+            margin-top: 24px;
+            font-size: 12px;
+            opacity: 0.7;
+            line-height: 1.6;
+        }
+        @media (max-width: 900px) {
+            .grid { grid-template-columns: 1fr; }
+            .right-col { min-height: 40vh; }
+        }
+    </style>
+</head>
+<body>
+    <div class="design-label">Warm 7: Asymmetric</div>
+    <div class="grid">
+        <div class="left-col">
+            <h1>TAL<br>ARDITI</h1>
+            <p class="subtitle">Living Room Concert</p>
+            <div class="accent-line"></div>
+            <div class="info">
+                February 20, 2026<br>
+                Neukölln, Berlin<br>
+                10-20 EUR · 20 spots
+            </div>
+            <form class="form">
+                <input type="text" placeholder="Your name" required>
+                <input type="email" placeholder="Your email" required>
+                <button>Reserve</button>
+            </form>
+            <p class="note">
+                Location via email<br>
+                Payment confirms spot
+            </p>
+        </div>
+        <div class="right-col">
+            <div class="badge">Feb 20</div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elegant 5: High Contrast</title>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Space Grotesk', -apple-system, sans-serif; background: #1A0F0A; color: #FFF9F4; line-height: 1.6; min-height: 100vh; padding: 60px 20px; }
+        .design-label { position: fixed; top: 20px; left: 20px; font-size: 11px; text-transform: uppercase; letter-spacing: 2px; opacity: 0.7; z-index: 10; }
+        .container { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: 500px 1fr; gap: 80px; align-items: center; }
+        .image-container { position: relative; }
+        .circular-image { width: 480px; height: 480px; border-radius: 50%; background-image: url('../hero-image.jpg'); background-size: cover; background-position: center 35%; box-shadow: 0 25px 70px rgba(232, 123, 42, 0.5); border: 3px solid #FFB84D; position: relative; }
+        .circular-image::after { content: ''; position: absolute; inset: -12px; border-radius: 50%; border: 1px solid rgba(255, 184, 77, 0.3); }
+        .content { padding-right: 40px; }
+        h1 { font-size: 48px; font-weight: 700; letter-spacing: 0px; color: #FFF9F4; margin-bottom: 4px; line-height: 1; }
+        h1 span { display: block; font-size: 32px; font-weight: 300; color: #FFB84D; margin-top: 4px; }
+        .subtitle { font-size: 16px; letter-spacing: 1px; margin-bottom: 45px; color: #D9B89A; font-weight: 400; }
+        .highlight-box { background: rgba(255, 184, 77, 0.12); border-left: 4px solid #FFB84D; padding: 24px; margin-bottom: 40px; border-radius: 2px; }
+        .detail-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
+        .detail-card { background: rgba(232, 123, 42, 0.08); padding: 16px; border-radius: 4px; }
+        .detail-label { font-size: 11px; text-transform: uppercase; letter-spacing: 1.5px; color: #FFB84D; font-weight: 600; margin-bottom: 6px; }
+        .detail-value { font-size: 15px; font-weight: 400; color: #FFF9F4; }
+        .bio { font-size: 15px; line-height: 1.7; margin-bottom: 40px; opacity: 0.9; font-weight: 300; }
+        .form { display: flex; flex-direction: column; gap: 12px; }
+        input { padding: 16px 18px; background: rgba(255, 249, 244, 0.06); border: 2px solid rgba(232, 123, 42, 0.2); border-radius: 6px; color: #FFF9F4; font-size: 14px; font-family: 'Space Grotesk', sans-serif; font-weight: 400; }
+        input::placeholder { color: rgba(255, 249, 244, 0.4); }
+        input:focus { outline: none; border-color: #FFB84D; background: rgba(255, 249, 244, 0.08); }
+        button { padding: 18px; background: linear-gradient(135deg, #FFB84D, #E87B2A); border: none; border-radius: 6px; color: #1A0F0A; font-size: 13px; font-weight: 700; cursor: pointer; margin-top: 8px; letter-spacing: 1.5px; text-transform: uppercase; }
+        button:hover { background: linear-gradient(135deg, #E87B2A, #FFB84D); transform: translateY(-1px); }
+        .note { margin-top: 24px; font-size: 12px; color: #D9B89A; line-height: 1.6; font-weight: 400; }
+        @media (max-width: 1100px) { .container { grid-template-columns: 1fr; text-align: center; } .circular-image { width: 360px; height: 360px; margin: 0 auto 40px; } .content { padding-right: 0; } .detail-grid { grid-template-columns: 1fr; } }
+    </style>
+</head>
+<body>
+    <div class="design-label">Elegant 5: High Contrast</div>
+    <div class="container">
+        <div class="image-container"><div class="circular-image"></div></div>
+        <div class="content">
+            <h1>TAL ARDITI<span>Living Room Concert</span></h1>
+            <p class="subtitle">February 20, 2026 · Neukölln</p>
+            <div class="highlight-box">
+                <div class="detail-grid">
+                    <div class="detail-card"><div class="detail-label">Price</div><div class="detail-value">10-20 EUR</div></div>
+                    <div class="detail-card"><div class="detail-label">Capacity</div><div class="detail-value">20 spots</div></div>
+                </div>
+            </div>
+            <p class="bio">Indie-folk meets electronica in Berlin's coziest living room. Experience looping-driven performances that create immersive sonic landscapes.</p>
+            <form class="form">
+                <input type="text" placeholder="Your name" required>
+                <input type="email" placeholder="Your email" required>
+                <button>Reserve Your Spot</button>
+            </form>
+            <p class="note">Location details sent via email · Payment confirms attendance</p>
+        </div>
+    </div>
+</body>
+</html>

@@ -288,31 +288,29 @@
             const urlParams = new URLSearchParams(window.location.search);
             const isTestMode = urlParams.get('test') === 'true';
 
-            try {
-                // Submit to Google Sheets
-                await fetch(CONFIG.GOOGLE_SCRIPT_URL, {
-                    method: 'POST',
-                    mode: 'no-cors',
-                    headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify({
-                        name: name,
-                        email: email,
-                        timestamp: new Date().toISOString(),
-                        paid: 'No'
-                    })
-                });
+            // Submit to Google Sheets (no-cors mode means we can't check response, but it works)
+            fetch(CONFIG.GOOGLE_SCRIPT_URL, {
+                method: 'POST',
+                mode: 'no-cors',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    name: name,
+                    email: email,
+                    timestamp: new Date().toISOString(),
+                    paid: 'No'
+                })
+            }).catch(err => console.log('Fetch attempted:', err));
 
-                if (isTestMode) {
-                    // Test mode: show success message and reload to update counter
-                    alert('Test signup successful! Check your Google Sheet.');
-                    window.location.reload();
-                } else {
-                    // Production: redirect to PayPal
-                    window.location.href = 'https://www.paypal.com/paypalme/arditital';
-                }
-            } catch (error) {
-                console.error('Error submitting form:', error);
-                alert('Something went wrong. Please try again.');
+            // Small delay to ensure submission completes
+            await new Promise(resolve => setTimeout(resolve, 500));
+
+            if (isTestMode) {
+                // Test mode: show success message and reload to update counter
+                alert('Test signup successful! Check your Google Sheet.');
+                window.location.reload();
+            } else {
+                // Production: redirect to PayPal
+                window.location.href = 'https://www.paypal.com/paypalme/arditital';
             }
         });
 

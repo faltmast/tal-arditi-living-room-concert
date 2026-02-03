@@ -273,14 +273,33 @@
         }
 
         // Submit form
+        let isSubmitting = false;
         document.querySelector('form').addEventListener('submit', async (e) => {
             e.preventDefault();
+
+            // Prevent double submission
+            if (isSubmitting) return;
+            isSubmitting = true;
+
+            const button = document.querySelector('button');
+            const inputs = document.querySelectorAll('input');
+            const originalButtonText = button.textContent;
+
+            // Disable form
+            button.disabled = true;
+            button.textContent = 'submitting...';
+            inputs.forEach(input => input.disabled = true);
 
             const name = document.querySelector('input[type="text"]').value.trim();
             const email = document.querySelector('input[type="email"]').value.trim();
 
             if (!name || !email) {
                 alert('Please fill in all fields');
+                // Re-enable form
+                button.disabled = false;
+                button.textContent = originalButtonText;
+                inputs.forEach(input => input.disabled = false);
+                isSubmitting = false;
                 return;
             }
 

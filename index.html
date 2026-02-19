@@ -227,7 +227,7 @@
                 </div>
                 <div class="detail-item">
                     <div class="detail-label">Spots Left</div>
-                    <div class="detail-value"><span id="spots-remaining" style="color: #E87B2A; font-weight: 500;">20</span> left</div>
+                    <div class="detail-value" id="spots-row" style="visibility: hidden;"><span id="spots-remaining" style="color: #E87B2A; font-weight: 500;"></span> left</div>
                 </div>
             </div>
 
@@ -264,6 +264,7 @@
                 const spotsLeft = CONFIG.MAX_CAPACITY - (data.count || 0);
 
                 document.getElementById('spots-remaining').textContent = Math.max(0, spotsLeft);
+                document.getElementById('spots-row').style.visibility = 'visible';
 
                 // Disable form if full
                 if (spotsLeft <= 0) {
